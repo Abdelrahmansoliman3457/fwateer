@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/flat.css" />
+    <link rel="stylesheet" href="css/select2.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>edit product</title>
+  </head>
+  <body>
+    <div class="nav-layer"></div>
+    <!--start loader-->
+    <div class="loader">
+      <img src="imgs/اوامر ابيض 1.png" class="loader-img" alt="" />
+      <div class="waveform">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+      </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="close" id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="content">
+        <div class="flex-group-me mb-4">
+          <div class="logo">
+            <img src="imgs/Group 1.png" alt="" />
+          </div>
+        </div>
+        <div class="flex-info-visitor">
+          <img
+            src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+            class="visitor-img"
+            alt=""
+          />
+          <div>
+            <h6 class="mb-2 dark-title">شركة اوامر الشبكة</h6>
+            <div class="font14 gray-col">مدير النظام</div>
+          </div>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="home.html">
+              <span class="icon-co">
+                <img src="imgs/Group (1).png" alt="" />
+              </span>
+              لوحة التحكم
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <h6 class="mb-4 mt-4 dark-title px-3">الادارة</h6>
+          <li>
+            <a href="Invoices.html" class="coll-open">
+              <span class="icon-co">
+                <img src="imgs/Group (2).png" alt="" />
+              </span>
+              الفواتير
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="home.html">
+              <span class="icon-co">
+                <img src="imgs/Group (3).png" alt="" />
+              </span>
+              المعاملات
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="payment-Pages.html">
+              <span class="icon-co">
+                <img src="imgs/Group 178445.png" alt="" />
+              </span>
+              صفحات الدفع
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <h6 class="mb-4 mt-4 dark-title px-3">الاعدادات</h6>
+          <li>
+            <a href="products.html">
+              <span class="icon-co">
+                <img src="imgs/Group 178446.png" alt="" />
+              </span>
+              المنتجات
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="manage-account.html">
+              <span class="icon-co">
+                <img src="imgs/Group (4).png" alt="" />
+              </span>
+              ادارة الحساب التجاري
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="manageTeam.html">
+              <span class="icon-co">
+                <img src="imgs/Group (5).png" alt="" />
+              </span>
+              ادارة فريق العمل
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html">
+              <span class="icon-co">
+                <img src="imgs/Group (6).png" alt="" />
+              </span>
+              الملف الشخصي
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="login.html" class="log-out-red">
+              <span class="icon-co">
+                <img src="imgs/Group (7).png" alt="" />
+              </span>
+              تسجيل الخروج
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="navbar-me" id="navbar">
+      <div class="container">
+        <div class="content">
+          <div class="menu visible-mobile" id="menu">
+            <img src="imgs/noun_List_2946302.png" alt="" />
+          </div>
+          <div class="flex-sm-gap px-3">
+            <img src="imgs/Group.png" class="disable-mobile" alt="" />
+            <div>لوحة التحكم</div>
+          </div>
+
+          <div class="left px-3">
+            <button class="trans-button">
+              <img src="imgs/Group 97708.png" class="lang-img" alt="" />
+            </button>
+            <div class="not show-noti pointer-click relative-parent">
+              <i class="fa-regular fa-bell"></i>
+              <span class="number">3</span>
+              <ul class="my-drop-now2">
+                <li>
+                  <a
+                    href="edit-invoice.html"
+                    class="flex-in-drop no-align pointer-none default-cur"
+                  >
+                    <div class="noti-i-cont">
+                      <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div>
+                      <div class="in-f-text mb-2 color-black">
+                        تم دفع الفاتورة رقم 221
+                      </div>
+                      <div class="gray-col clamp2">
+                        تم دفع الفاتورة رقم 221 تم دفع الفاتورة رقم 221 تم دفع
+                        الفاتورة رقم 221 تم دفع الفاتورةتم دفع الفاتورةتم دفع
+                        الفاتورة رقم 221
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="edit-invoice.html"
+                    class="flex-in-drop no-align pointer-none default-cur"
+                  >
+                    <div class="noti-i-cont">
+                      <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div>
+                      <div class="in-f-text mb-2 color-black">
+                        تم دفع الفاتورة رقم 221
+                      </div>
+                      <div class="gray-col clamp2">
+                        تم دفع الفاتورة رقم 221 تم دفع الفاتورة رقم 221 تم دفع
+                        الفاتورة رقم 221 تم دفع الفاتورةتم دفع الفاتورةتم دفع
+                        الفاتورة رقم 221
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-sec" id="main">
+      <div class="container">
+        <form action="">
+          <div class="main-box-dashboard mt-3 mb-4">
+            <div class="main-title">تعديل المنتج</div>
+            <div class="body-main-box">
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <div class="main-input-cont">
+                    <label for="upload-img" class="upload-img">
+                      <i class="fa-regular fa-image"></i>
+                      <div class="up-text">صورة المنتج</div>
+                      <div class="up-text">png , Jpg</div>
+                      <img src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg" class="imgProfile img-show" alt="" />
+                    </label>
+                    <input
+                      id="upload-img"
+                      onchange="uploadProfileIMG(this)"
+                      class="upload-main-in"
+                      type="file"
+                      accept="image/*"
+                      hidden
+                    />
+                  </div>
+                </div>
+                <div class="col-12 mb-3">
+                  <div class="flex-input-defer">
+                    <div class="label-defer">اسم المنتج</div>
+                    <input
+                      type="text"
+                      class="defer-input"
+                      placeholder="الرجاء ادخال اسم المنتج"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-12 mb-3">
+                  <div class="flex-input-defer">
+                    <div class="label-defer">سعر الوحدة</div>
+                    <input
+                      type="number"
+                      class="defer-input"
+                      placeholder="الرجاء ادخال سعر الوحدة"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12 mb-3">
+                  <div class="flex-input-defer">
+                    <div class="label-defer">الكمية المتاحة</div>
+                    <input
+                      type="number"
+                      class="defer-input"
+                      placeholder="الرجاء ادخال الكمية المتاحة"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 mb-3">
+                  <div class="flex-input-defer no-align">
+                    <div class="label-defer">وصف المنتج</div>
+                    <textarea
+                      name=""
+                      id=""
+                      rows="5"
+                      placeholder="الرجاء ادخال وصف المنتج"
+                      class="defer-textarea"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-12 mb-3 showattrcheck">
+                  <div class="flex-sm-gap">
+                    <input
+                      type="checkbox"
+                      checked
+                      class="main-check bigger"
+                      id="set1"
+                    />
+                    <label for="set1" class="gray-col font15"
+                      >المنتج متعدد السمات</label
+                    >
+                  </div>
+                </div>
+                <div class="col-12 mb-3 showwith-multi-attr">
+                  <div class="attr-main mb-2">الحجم</div>
+                  <div class="attrs-container">
+                    <div class="flex-sm-gap mb-3">
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">القيمة - الاسم</div>
+                        <input
+                          type="text"
+                          placeholder="اسم الصنف"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">المخزون</div>
+                        <input
+                          type="text"
+                          placeholder="مخزون المنتج لديك"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">السعر</div>
+                        <input
+                          type="text"
+                          placeholder="سعر الوحدة"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2 non-visible">test</div>
+                        <div
+                          class="small-btn add-new-row up"
+                          onclick="addattr(this)"
+                        >
+                          <i class="fa-solid fa-plus"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-sm-gap mb-3">
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">القيمة - الاسم</div>
+                        <input
+                          type="text"
+                          placeholder="اسم الصنف"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">المخزون</div>
+                        <input
+                          type="text"
+                          placeholder="مخزون المنتج لديك"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">السعر</div>
+                        <input
+                          type="text"
+                          placeholder="سعر الوحدة"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2 non-visible">test</div>
+                        <div
+                          class="small-btn add-new-row up bg-red"
+                          onclick="removeattr(this)"
+                        >
+                          <i class="fa-solid fa-minus"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-end-main">
+                <button
+                  data-bs-target="#successModal"
+                  data-bs-toggle="modal"
+                  class="main-btn up xl bg-green"
+                  type="button"
+                >
+                  حفظ
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- success send Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="all-modal-content">
+            <div class="modal-body-main">
+              <div class="flex-group-me">
+                <img src="imgs/success.png" class="danger-img mb-4" alt="" />
+              </div>
+              <div class="text-center gray-col mb-4">تم تعديل المنتج بنجاح</div>
+              <div class="flex-sm-gap">
+                <a href="products.html" class="main-btn up w-100">المنتجات</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flat.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--upload  img-->
+    <script>
+      function uploadProfileIMG(input) {
+        input.previousElementSibling.querySelector(".imgProfile").src =
+          URL.createObjectURL(event.target.files[0]);
+
+        input.previousElementSibling
+          .querySelector(".imgProfile")
+          .classList.add("img-show");
+      }
+    </script>
+    <!--add new attr-->
+    <script>
+      function addattr(element) {
+        let appendedDiv = `<div class="flex-sm-gap mb-3">
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">القيمة - الاسم</div>
+                        <input
+                          type="text"
+                          placeholder="اسم الصنف"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">المخزون</div>
+                        <input
+                          type="text"
+                          placeholder="مخزون المنتج لديك"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2">السعر</div>
+                        <input
+                          type="text"
+                          placeholder="سعر الوحدة"
+                          class="main-input wid-small"
+                        />
+                      </div>
+                      <div class="main-input-cont">
+                        <div class="main-label mb-2 non-visible">test</div>
+                        <div
+                          class="small-btn add-new-row up bg-red"
+                          onclick="removeattr(this)"
+                        >
+                          <i class="fa-solid fa-minus"></i>
+                        </div>
+                      </div>
+                    </div>`;
+
+        element
+          .closest(".attrs-container")
+          .insertAdjacentHTML("beforeend", appendedDiv);
+      }
+    </script>
+    <script>
+      function removeattr(ele) {
+        ele.closest(".flex-sm-gap").remove();
+      }
+    </script>
+  </body>
+</html>

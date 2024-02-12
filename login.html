@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="flag/build/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/ltrStyle.css" /> -->
+
+    <title>login</title>
+  </head>
+  <body>
+    <div class="nav-layer"></div>
+    <!--start loader-->
+    <div class="loader">
+      <img src="imgs/اوامر ابيض 1.png" class="loader-img" alt="" />
+      <div class="waveform">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+      </div>
+    </div>
+    <!--start navbar-->
+    <nav class="navBar">
+      <div class="container">
+        <div class="hidden-div"></div>
+        <div class="logo">
+          <img src="imgs/Group 1.png" class="logo-nav" alt="" />
+        </div>
+        <a href="register.html" class="main-btn up bg-green">حساب جديد</a>
+      </div>
+    </nav>
+    <!--End navbar-->
+    <div class="authbody">
+      <div class="container">
+        <div class="auth-contain">
+          <div class="row">
+            <div class="col-lg-6 col-12">
+              <div class="right-login">
+                <div class="abs-top-right-img">
+                  <img src="imgs/background.svg" alt="" />
+                </div>
+                <!--very imp note => put (requiredInputLabel) on label of input to make it required-->
+                <form action="" class="form-login">
+                  <h5 class="mb-3 text-center">مرحبا بعودتك في فواتير أوامر</h5>
+                  <!--use it when you activate account-->
+                  <!-- <div class="activate-acount mt-4 mb-4">
+                    <div>تم ارسال بريد الالكتروني لتفعيل البريد الخاص بك في فواتير اوامر </div>
+                    <button class="main-btn lg up" type="button">اعادة ارسال بريد التفعيل</button>
+                  </div> -->
+                  <!--use it when account is activated-->
+                  <!-- <div class="mt-4 mb-4 done-activeted">
+                    تم تفعيل بريدك الالكتروني بنجاح
+                  </div> -->
+                  <h6 class="text-center">تسجيل الدخول</h6>
+                  <p class="gray-col text-center mb-4">
+                    الرجاء ادخال البيانات التالية لتسجيل الدخول
+                  </p>
+                  <div class="main-input-cont mb-3">
+                    <input
+                      type="email"
+                      class="main-input login-input"
+                      placeholder="برجاء ادخال البريد الالكتروني"
+                    />
+                    <div class="abs-login">
+                      <i class="fa-regular fa-envelope"></i>
+                    </div>
+                  </div>
+                  <div class="main-input-cont mb-3">
+                    <input
+                      type="password"
+                      class="main-input login-input inputPassSet"
+                      placeholder="برجاء ادخال كلمة المرور"
+                    />
+                    <div class="abs-login">
+                      <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="abs-login-left check-setting-ic">
+                      <i class="fa-regular fa-eye"></i>
+                    </div>
+                  </div>
+                  <div class="font14 mb-3 gray-col">
+                    <a href="forgetPass.html"> نسيت كلمة المرور ؟</a>
+                  </div>
+                  <button type="submit" class="main-btn up w-100">
+                    تسجيل الدخول
+                  </button>
+                  <div class="flex-group-me mt-3">
+                    <div class="dont-have font14 gray-col">
+                      لا املك حساب؟ <a href="register.html">حساب جديد</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 hidden-div">
+              <div class="left-login h-100">
+                <img src="imgs/image 4.png" class="img-login-under" alt="" />
+                <img
+                  src="imgs/اوامر ابيض 1.png"
+                  class="abs-left-login"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="flag/build/js/intlTelInput.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- PassWord Show and hide -->
+    <script>
+      const iconsPassSet = document.querySelectorAll(".check-setting-ic");
+
+      if (iconsPassSet) {
+        iconsPassSet.forEach((ic) => {
+          ic.addEventListener("click", function () {
+            let input = ic.parentElement.querySelector(".inputPassSet");
+            showPassword(input, ic);
+          });
+        });
+      }
+
+      // Function To Show And Hide Password
+      function showPassword(input, icon) {
+        if (input.type == "password") {
+          input.setAttribute("type", "text");
+          icon.innerHTML = `<i class="fa-regular fa-eye-slash"></i>`;
+        } else {
+          input.setAttribute("type", "password");
+          icon.innerHTML = `<i class="fa-regular fa-eye"></i>`;
+        }
+
+        // input.focus();
+      }
+    </script>
+  </body>
+</html>

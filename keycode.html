@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="flag/build/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Key code</title>
+  </head>
+  <body>
+    <div class="nav-layer"></div>
+    <!--start loader-->
+    <div class="loader">
+      <img src="imgs/اوامر ابيض 1.png" class="loader-img" alt="" />
+      <div class="waveform">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+      </div>
+    </div>
+    <!--start navbar-->
+    <nav class="navBar">
+      <div class="container">
+        <div class="hidden-div"></div>
+        <div class="logo">
+          <img src="imgs/Group 1.png" class="logo-nav" alt="" />
+        </div>
+        <a href="register.html" class="main-btn up bg-green">حساب جديد</a>
+      </div>
+    </nav>
+    <!--End navbar-->
+    <div class="authbody">
+      <div class="container">
+        <div class="auth-contain">
+          <div class="row">
+            <div class="col-lg-6 col-12">
+              <div class="right-login">
+                <div class="abs-top-right-img">
+                  <img src="imgs/background.svg" alt="" />
+                </div>
+                <form action="" class="form-login">
+                  <h5 class="mb-3 text-center">مرحبا بعودتك في فواتير أوامر</h5>
+                  <h6 class="text-center">تفعيل الحساب</h6>
+                  <p class="gray-col text-center mb-4">
+                    الرجاء ادخال رمز التفعيل المرسل عبر رقم الجوال
+                  </p>
+                  <div class="code-container">
+                    <!--use value of this input-->
+                    <input
+                      id="key-code"
+                      hidden
+                      name="code"
+                      type="text"
+                      value=""
+                    />
+                    <input
+                      type="number"
+                      class="code"
+                      min="0"
+                      max="9"
+                      required
+                    />
+                    <input
+                      type="number"
+                      class="code"
+                      min="0"
+                      max="9"
+                      required
+                    />
+                    <input
+                      type="number"
+                      class="code"
+                      min="0"
+                      max="9"
+                      required
+                    />
+                    <input
+                      type="number"
+                      class="code"
+                      min="0"
+                      max="9"
+                      required
+                    />
+                  </div>
+                  <button type="button" class="main-btn up w-100 key-ajax">
+                    تفعيل
+                  </button>
+                  <div class="flex-bet-main mt-3">
+                    <div class="dont-have font14 gray-col">
+                      لم تتلقى رمز التفعيل؟
+                      <button type="button" id="js-startTimer" data-time="0:30" class="trans-button green-col">
+                        اعد ارسال
+                      </button>
+                    </div>
+                    <span class="js-timeout green-col">0:30</span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 hidden-div">
+              <div class="left-login h-100">
+                <img src="imgs/image 4.png" class="img-login-under" alt="" />
+                <img
+                  src="imgs/اوامر ابيض 1.png"
+                  class="abs-left-login"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="flag/build/js/intlTelInput.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--get key code-->
+    <script>
+      $(document).ready(function () {
+        let codes = document.querySelectorAll(".code");
+
+        $(".code-container .code").first().focus();
+
+        codes.forEach((code, idx) => {
+          code.addEventListener("keydown", (e) => {
+            if (e.key >= 0 && e.key <= 9) {
+              codes[idx].value = "";
+              if ([idx + 1] < codes.length) {
+                setTimeout(() => codes[idx + 1].focus(), 10);
+              }
+            } else if (e.key === "Backspace") {
+              setTimeout(() => codes[idx - 1].focus(), 10);
+            }
+          });
+        });
+        // add key code value to  hidden input
+        let HiddenInp = document.querySelector("#key-code");
+        let AjaxBtn = document.querySelector(".key-ajax");
+        let inpArray = [];
+        AjaxBtn.addEventListener("click", function () {
+          for (let i = 0; i < codes.length; i++) {
+            inpArray.push(codes[i].value);
+          }
+          let inpValReal = inpArray.join("");
+          HiddenInp.value = inpValReal;
+          inpArray = [];
+        });
+      });
+    </script>
+    <!-- timer code -->
+    <script>
+      var interval;
+
+      function countdown() {
+        clearInterval(interval);
+        interval = setInterval(function () {
+          var timer = $(".js-timeout").html();
+          timer = timer.split(":");
+          var minutes = timer[0];
+          var seconds = timer[1];
+          seconds -= 1;
+          if (minutes < 0) return;
+          else if (seconds < 0 && minutes != 0) {
+            minutes -= 1;
+            seconds = 59;
+          } else if (seconds < 10 && length.seconds != 2)
+            seconds = "0" + seconds;
+
+          $(".js-timeout").html(minutes + ":" + seconds);
+
+          if (minutes == 0 && seconds == 0) clearInterval(interval);
+        }, 1000);
+      }
+
+      $("#js-startTimer").click(function () {
+        $(".js-timeout").text($(this).data("time"));
+        countdown();
+      });
+      countdown();
+    </script>
+  </body>
+</html>

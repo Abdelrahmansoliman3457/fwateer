@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css.map" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/flat.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>user info</title>
+  </head>
+  <body>
+    <div class="nav-layer"></div>
+    <!--start loader-->
+    <div class="loader">
+      <img src="imgs/اوامر ابيض 1.png" class="loader-img" alt="" />
+      <div class="waveform">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+      </div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="close" id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="content">
+        <div class="flex-group-me mb-4">
+          <div class="logo">
+            <img src="imgs/Group 1.png" alt="" />
+          </div>
+        </div>
+        <div class="flex-info-visitor">
+          <img
+            src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+            class="visitor-img"
+            alt=""
+          />
+          <div>
+            <h6 class="mb-2 dark-title">شركة اوامر الشبكة</h6>
+            <div class="font14 gray-col">مدير النظام</div>
+          </div>
+        </div>
+        <ul class="links">
+          <li>
+            <a href="home.html">
+              <span class="icon-co">
+                <img src="imgs/Group (1).png" alt="" />
+              </span>
+              لوحة التحكم
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <h6 class="mb-4 mt-4 dark-title px-3">الادارة</h6>
+          <li>
+            <a href="Invoices.html" class="coll-open">
+              <span class="icon-co">
+                <img src="imgs/Group (2).png" alt="" />
+              </span>
+              الفواتير
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="home.html">
+              <span class="icon-co">
+                <img src="imgs/Group (3).png" alt="" />
+              </span>
+              المعاملات
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="payment-Pages.html">
+              <span class="icon-co">
+                <img src="imgs/Group 178445.png" alt="" />
+              </span>
+              صفحات الدفع
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <h6 class="mb-4 mt-4 dark-title px-3">الاعدادات</h6>
+          <li>
+            <a href="products.html">
+              <span class="icon-co">
+                <img src="imgs/Group 178446.png" alt="" />
+              </span>
+              المنتجات
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="manage-account.html">
+              <span class="icon-co">
+                <img src="imgs/Group (4).png" alt="" />
+              </span>
+              ادارة الحساب التجاري
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="manageTeam.html">
+              <span class="icon-co">
+                <img src="imgs/Group (5).png" alt="" />
+              </span>
+              ادارة فريق العمل
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html">
+              <span class="icon-co">
+                <img src="imgs/Group (6).png" alt="" />
+              </span>
+              الملف الشخصي
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="login.html" class="log-out-red">
+              <span class="icon-co">
+                <img src="imgs/Group (7).png" alt="" />
+              </span>
+              تسجيل الخروج
+              <i class="fa-solid fa-angle-left icon-right"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <nav class="navbar-me" id="navbar">
+      <div class="container">
+        <div class="content">
+          <div class="menu visible-mobile" id="menu">
+            <img src="imgs/noun_List_2946302.png" alt="" />
+          </div>
+          <div class="flex-sm-gap px-3">
+            <img src="imgs/Group.png" class="disable-mobile" alt="" />
+            <div>لوحة التحكم</div>
+          </div>
+
+          <div class="left px-3">
+            <button class="trans-button">
+              <img src="imgs/Group 97708.png" class="lang-img" alt="" />
+            </button>
+            <div class="not show-noti pointer-click relative-parent">
+              <i class="fa-regular fa-bell"></i>
+              <span class="number">3</span>
+              <ul class="my-drop-now2">
+                <li>
+                  <a
+                    href="edit-invoice.html"
+                    class="flex-in-drop no-align pointer-none default-cur"
+                  >
+                    <div class="noti-i-cont">
+                      <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div>
+                      <div class="in-f-text mb-2 color-black">
+                        تم دفع الفاتورة رقم 221
+                      </div>
+                      <div class="gray-col clamp2">
+                        تم دفع الفاتورة رقم 221 تم دفع الفاتورة رقم 221 تم دفع
+                        الفاتورة رقم 221 تم دفع الفاتورةتم دفع الفاتورةتم دفع
+                        الفاتورة رقم 221
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="edit-invoice.html"
+                    class="flex-in-drop no-align pointer-none default-cur"
+                  >
+                    <div class="noti-i-cont">
+                      <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div>
+                      <div class="in-f-text mb-2 color-black">
+                        تم دفع الفاتورة رقم 221
+                      </div>
+                      <div class="gray-col clamp2">
+                        تم دفع الفاتورة رقم 221 تم دفع الفاتورة رقم 221 تم دفع
+                        الفاتورة رقم 221 تم دفع الفاتورةتم دفع الفاتورةتم دفع
+                        الفاتورة رقم 221
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main-sec mt-3" id="main">
+      <div class="container">
+        <div class="top-links mb-4">
+          <a href="products.html">المنتجات</a>
+          <div class="icon-top-links">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div>تفاصيل المنتج</div>
+        </div>
+        <div class="box-table">
+          <div class="flex-bet-main mb-3">
+            <div class="default-title">معلومات المنتج</div>
+            <div class="left-top-table">
+              <div class="flex-sm-gap">
+                <a href="editProduct.html" class="main-btn up bg-green lg">
+                  تعديل بيانات المنتج
+                </a>
+                <button
+                  class="main-btn up bg-red"
+                  data-bs-target="#confirmModal"
+                  data-bs-toggle="modal"
+                  type="button"
+                >
+                  حذف المنتج
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="shadow-box user-shadow">
+            <div class="flex-sm-gap px-3 mb-3">
+              <img
+                src="imgs/185644495_1667380803456791_1968050560740665054_n.jpg"
+                class="product-img-main"
+                alt=""
+              />
+            </div>
+            <div>
+              <div class="flex-bet-info">
+                <div class="info-name">اسم المنتج</div>
+                <div class="info-value-main name-pro">ثلاجة</div>
+                <span class="invoice-status product-status paid">
+                  <div class="sm-dot"></div>
+                  <div class="status-text">متاح</div>
+                </span>
+              </div>
+              <div class="flex-bet-info">
+                <div class="info-name">الوصف</div>
+                <div class="info-value">
+                  هذا النص هو نص بديل يمكن ان يستبدل بنص اخر في نفس المساحة
+                </div>
+              </div>
+              <div class="flex-bet-info">
+                <div class="info-name">سعر الوحدة</div>
+                <div class="info-value">1500 ر.س</div>
+              </div>
+              <div class="flex-bet-info">
+                <div class="info-name">رقم المنتج</div>
+                <div class="info-value">12345</div>
+              </div>
+              <div class="flex-bet-info">
+                <div class="info-name">الكمية المتاحة</div>
+                <div class="info-value-main">50</div>
+                <div
+                  data-bs-target="#add-qty"
+                  data-bs-toggle="modal"
+                  class="decoration-under color-main pointer-click"
+                >
+                  ضبط الكمية
+                </div>
+              </div>
+              <div class="flex-bet-info">
+                <div class="info-name">الكمية المشتراه</div>
+                <div class="info-value">10</div>
+              </div>
+              <div class="flex-bet-info">
+                <div class="info-name">إجمالي الإيرادات</div>
+                <div class="info-value">15000 ر.س</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- confirm Modal -->
+    <div
+      class="modal fade"
+      id="confirmModal"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="all-modal-content">
+            <div class="flex-top-modal">
+              <h6 class="mb-0">حذف المنتج</h6>
+            </div>
+            <div class="modal-body-main">
+              <div class="flex-group-me">
+                <img
+                  src="imgs/noun_warning.png"
+                  class="danger-img mb-4"
+                  alt=""
+                />
+              </div>
+              <div class="text-center gray-col mb-4">
+                هل حقا تريد حذف هذا المنتج؟
+              </div>
+              <div class="flex-sm-gap">
+                <button
+                  type="button"
+                  data-bs-target="#successModal"
+                  data-bs-toggle="modal"
+                  data-bs-dismiss="modal"
+                  class="main-btn up w-100 bg-red"
+                >
+                  حذف
+                </button>
+                <button
+                  type="button"
+                  class="main-btn up"
+                  data-bs-dismiss="modal"
+                >
+                  تراجع
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- success send Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="all-modal-content">
+            <div class="modal-body-main">
+              <div class="flex-group-me">
+                <img src="imgs/success.png" class="danger-img mb-4" alt="" />
+              </div>
+              <div class="text-center gray-col mb-4">تم حذف المنتج بنجاح</div>
+              <div class="flex-sm-gap">
+                <a href="products.html" class="main-btn up w-100">المنتجات</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--add qty-->
+    <div
+      class="modal fade"
+      id="add-qty"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="all-modal-content">
+            <div class="flex-top-modal">
+              <h6 class="mb-0">ضبط الكمية</h6>
+            </div>
+            <div class="modal-body-main">
+              <div class="gray-col mb-2">إضافة الكمية الجديدة</div>
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <div class="main-input-cont">
+                    <input
+                      type="text"
+                      class="main-input"
+                      placeholder="الرجاء إضافة الكمية الجديدة"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 mb-3">
+                  <div class="flex-sm-gap">
+                    <div class="attr-main mb-2">الكمية الحالية : 50</div>
+                    <div class="attr-main mb-2">الكمية المحدثة : 70</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-sm-gap">
+                <button class="main-btn up w-100">إضافة</button>
+                <button class="main-btn up bg-trans" data-bs-dismiss="modal">
+                  الغاء
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/flat.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
